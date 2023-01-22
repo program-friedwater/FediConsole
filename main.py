@@ -10,6 +10,6 @@ def app() :
         if login == 'Mastodon':
             if instances == 0:
              instances = input("Please enter instances url.")
-    else:
-        login = input("Please enter SNS name.")
+        else:  
+            login = input("Please enter SNS name.")
         

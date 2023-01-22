@@ -1,8 +1,11 @@
 import requests
 from Fire import Fire
+import uuid
 login = 0
 instances = 0
-def app() :
+miauth = 0
+mitoken = 0
+def login():      
     if login == 'Misskey':
         if instances == 0:
             instances = input("Please enter instances url.")
@@ -10,6 +13,12 @@ def app() :
         if login == 'Mastodon':
             if instances == 0:
              instances = input("Please enter instances url.")
-        else:  
-            login = input("Please enter SNS name.")
-        
+        else:
+            snssetup()
+
+def snssetup():
+    login = input("Please enter SNS name.")
+    instance = input("Please enter instances url.")
+# ここからMisskey機能実装
+def miauth():
+    miauth = uuid.uuid4()

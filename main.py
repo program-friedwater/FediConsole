@@ -3,8 +3,9 @@ from Fire import Fire
 import uuid
 login = 0
 instances = 0
-miauth = 0
+miauthuuid = 0
 mitoken = 0
+miaurl = 0
 def login():      
     if login == 'Misskey':
         if instances == 0:
@@ -21,4 +22,8 @@ def snssetup():
     instance = input("Please enter instances url.")
 # ここからMisskey機能実装
 def miauth():
-    miauth = uuid.uuid4()
+    miauthuuid = uuid.uuid4()
+    miaurl = "https://" + instances + "/" + miauthuuid + "/"
+
+def mipost():
+    login() # 適当に置いた

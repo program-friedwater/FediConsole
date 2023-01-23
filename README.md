@@ -1,1 +1,2 @@
 # FediConsole
+コンソールアプリ

@@ -7,11 +7,11 @@ instances = 0
 miauthuuid = 0
 mitoken = 0
 miaurl = 0
+okay = 0
 vertkt = {"a" : "asdf"}
 def login():      
     if login == 'Misskey':
-        if instances == 0:
-            instances = input("Please enter instances url.")
+        miauth()
     else:
         if login == 'Mastodon':
             if instances == 0:
@@ -27,8 +27,8 @@ def miauth():
     miauthuuid = uuid.uuid4()
     miaurl = "https://" + instances + "/" + miauthuuid + "/"
     response = requests.post(miaurl, json=vertkt)
+    okay = input("ACCESS HERE" + miaurl)
     response_dict = json.loads(response.text)
-    response = requests.post(miaurl, json=vertkt)
     mktkn = response_dict["i"]
 
 def mipost():

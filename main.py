@@ -10,7 +10,7 @@ mitoken = 0
 miaurl = 0
 okay = 0
 vertkt = {"a" : "asdf"}
-class fire:
+class cmdline:
     def login():      
         if login == 'Misskey':
             miauth()
@@ -23,7 +23,7 @@ class fire:
         def snssetup():
             login = input("Please enter SNS name.")
             instance = input("Please enter instances url.")
-            
+
         def miauth():
             miauthuuid = uuid.uuid4()
             miaurl = "https://" + instances + "/" + miauthuuid + "/"
@@ -41,4 +41,4 @@ class fire:
         login() # 適当に置いた
 
 if __name__ == '__main__':
-    fire.Fire(fire)
+    fire.Fire(cmdline)
